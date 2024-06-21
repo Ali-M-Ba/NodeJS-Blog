@@ -1,0 +1,42 @@
+<%- include('./partials/header.ejs') %>
+
+<main class="container">
+	<aside class="author">
+		<img class="author__image" src="images/hero_image.jpg" alt="">
+		<div class="author__text">
+			<h1 class="author__heading">Hi, I'm Ali 👨🏼‍💻</h1>
+			<p class="author__title">Web Developer</p>	
+		</div>
+	</aside>
+
+	<section class="main__section">
+		<div class="form__container">
+			<h2 class="form__heading">Add New Post</h2>
+			<form id="form" class="form" action="/add-post" method="POST">
+				<input id="title" type="text" placeholder="Title" name="title" required>
+				<textarea id="body" name="body" placeholder="Content" rows="5" required></textarea>
+				<input id="submitBtn" type="submit" value="Add" class="btn add__btn">
+		</form>
+		</div>
+
+		<article class="articles">
+			<ul class="article-ul">
+				<% posts.forEach(post => { %>
+					<li>
+						<a href="/post/<%= post._id %>">
+							<span><%= post.title %></span>
+							<span class="article-list__date"><%= post.updatedAt %></span>
+						</a>
+					</li>
+					<% }) %>
+			</ul>
+		</article>
+		<% if (hasNextPage) { %>
+			<a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+		<% } %>
+	</section>
+</main>
+
+<script src="/js/script.js"></script>
+
+<%- include('./partials/footer.ejs') %>

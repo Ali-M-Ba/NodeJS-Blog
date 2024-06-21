@@ -1,0 +1,13 @@
+.editPost__Heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 10px;
+}
+
+.delete__btn {
+	background-color: rgb(255, 37, 37);
+	box-shadow: rgb(255, 37, 37) 0 0 10px 5px;
+	color: white;
+	width: 100px;
+}

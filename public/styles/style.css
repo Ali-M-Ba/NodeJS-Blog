@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bree+Serif&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+  background-image: url('/images/night-sky.png');
+	color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  height: 100%;
+	padding: 0;
+	margin: 0;
+}
+.container {
+	width: 1100px;
+	display: flex;
+  justify-content: space-evenly;
+	background-color: #0F0F0F;
+  box-shadow: white 0 0 10px 5px;
+	border-radius: 15px;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+a {
+	list-style-type: none;
+	text-decoration: none;
+	color: white;
+}
+
+
+.btn {
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 6px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: medium;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 100px;
+}
+
+@media only screen and (max-width: 1220px) {
+  .container {
+    flex-direction: column;
+		width: 80%;
+		align-items: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+		width: 80%;
+  }
+}
